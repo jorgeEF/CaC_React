@@ -19,3 +19,14 @@
     background-position: center;
     background-image: url(../img/batmanOFF.jpg);
 }
+
+.batman-activo{
+    background-image: url(../img/batmanON.gif);
+}
+
+.bati_boton{
+    margin: 291px auto 0;
+    /* border: 1px solid red; */
+    width: 30px;
+    height: 50px;
+}
