@@ -2,7 +2,7 @@
 
 let nombre = prompt("Por favor, ingresa tu nombre:");
 
-let confirmacion = confirm(`Ingresaste ${nombre}, continuar? ?`);
+let confirmacion = confirm(`Ingresaste ${nombre}, continuar?`);
 
 if (confirmacion == true){
     alert ("Bienvenido");
