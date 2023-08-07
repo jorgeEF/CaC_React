@@ -1,12 +1,15 @@
-// interacciones
+// Interacciones con variables
 
-let nombre = prompt("Esto es un prompt(): ingresa tu nombre");
+let nombre = prompt("Por favor, ingresa tu nombre:");
 
-let confirmacion = confirm(`Esto es un confirm(), entendiste ${nombre} ?`)
+let confirmacion = confirm(`Ingresaste ${nombre}, continuar? ?`);
 
 if (confirmacion == true){
-    alert ("Esto es un alert(): Me alegro hayas entendido")
+    alert ("Bienvenido");
 }
 else {
-    alert ("Esto es un alert(): Lamento que no lo hayas entendido")
+    alert ("La próxima ingresa bien tu nombre");
 }
+
+// mostrar variable en el front
+document.write(`Hola ${nombre}`);
