@@ -112,8 +112,10 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
   return numero % 3 === 0 & numero % 5 === 0 ? "fizzbuzz" : numero % 3 === 0 ? "fizz" : numero % 5 === 0 ? "buzz": numero;
+  // let respuesta = "";
+  // return numero % 3 === 0 ? respuesta += "fizz": numero % 5 === 0 ? respuesta += "buzz": respuesta !="" ? respuesta : numero;
 }
-console.log(fizzBuzz(21));
+console.log(fizzBuzz(30));
 
 
 function operadoresLogicos(num1, num2, num3) {
