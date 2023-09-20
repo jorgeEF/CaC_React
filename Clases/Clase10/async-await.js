@@ -7,7 +7,8 @@ let getNameAsync = async (idPost)=>{
       let resUser = await   fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
       let user = await resUser.json()
 
-      document.write(`${user.name} vive en ${user.address.city} escribio el post ${idPost}: ${post.title}`) 
+      //document.write(`${user.name} vive en ${user.address.city} escribio el post ${idPost}: ${post.title}`)
+      console.log(`${user.name} vive en ${user.address.city} escribio el post ${idPost}: ${post.title}`);
 
     } catch (error) {
         console.log(error);
