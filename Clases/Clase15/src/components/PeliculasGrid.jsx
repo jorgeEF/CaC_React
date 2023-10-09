@@ -1,7 +1,7 @@
 /* import peliculas from "./peliculas.json" */
 import {get} from "../utils/httpCliente.js"
 import { useState, useEffect } from "react"
-import { PeliculasCard } from "./PeliculasCard"
+import { PeliculasCard } from "./PeliculasCard.jsx"
 import "./PeliculasGrid.css"
 
 export const PeliculasGrid=()=>{
