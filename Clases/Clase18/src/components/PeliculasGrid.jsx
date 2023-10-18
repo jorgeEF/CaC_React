@@ -2,7 +2,7 @@ import { PeliculasCard } from "./PeliculasCard"
 
 import "./PeliculasGrid.css"
 
-import peliculas from "./data/peliculas.json";
+import peliculas from "../data/peliculas.json";
 
 export const PeliculasGrid = () => {
 

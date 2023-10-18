@@ -1,6 +1,7 @@
 import "./App.css";
 
-import { PeliculasGrid } from "./PeliculasGrid";
+import { PeliculasGrid } from "./components/PeliculasGrid";
+import { LandingPage } from "./pages/LandingPage";
 
 export const App = () => {
 
@@ -8,7 +9,7 @@ export const App = () => {
         <div>
             <header className="title">Películas</header>
             <main>
-                <PeliculasGrid/>
+                <LandingPage/>
             </main>
         </div>
     )
