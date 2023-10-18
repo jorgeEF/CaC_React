@@ -1,16 +1,22 @@
 import "./App.css";
-
-import { PeliculasGrid } from "./components/PeliculasGrid";
 import { LandingPage } from "./pages/LandingPage";
+import {BrowserRouter,Routes,Route,Link} from "react-router-dom";
 
 export const App = () => {
 
     return(
-        <div>
-            <header className="title">Películas</header>
-            <main>
-                <LandingPage/>
-            </main>
-        </div>
+        <BrowserRouter>
+        <header>
+            <Link to="/"><h1 className="title">PELICULAS</h1></Link>
+        </header>
+            
+            <Routes>
+                <Route path="/" element = {<LandingPage/>}/>
+                <Route path="/pelicula" element = "Detalle de pelicula"/>
+                
+                    
+                
+            </Routes>
+        </BrowserRouter>
     )
 }
