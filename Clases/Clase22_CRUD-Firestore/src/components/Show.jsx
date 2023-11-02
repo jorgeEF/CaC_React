@@ -25,6 +25,7 @@ export const Show = () => {
     const deleteHeroe = async(id)=> {
         const heroeDoc = doc(db,"heroes",id);
         await deleteDoc(heroeDoc);
+        getHeroes();
     }
     // 5 funcion para sweet alert (confirma eliminacion)
     const confirmDelete = (id)=>{
@@ -50,7 +51,7 @@ export const Show = () => {
     }
     // 6 useEffect
     useEffect(() => {
-      getHeroes();      
+      getHeroes();   
     }, [])
     
     // 7 devolver la vista del componente
@@ -61,10 +62,37 @@ export const Show = () => {
                 <div className="row">
                     <div className="col">
                         <div className="d-grid gap-2">
-                            <Link to="/create">CREAR</Link>
-                            <Link to="/edit">EDITAR</Link>
-
+                            <Link to="/create" className="btn btn-primary">CREAR</Link>                         
                         </div>
+                        <table className="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Edad</th>
+                                    <th>Genero</th>
+                                    <th>Alias</th>
+                                    <th>Poder</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {heroes.map((heroe)=>(
+                                    <tr>
+                                        <td>{heroe.name}</td>
+                                        <td>{heroe.lastname}</td>
+                                        <td>{heroe.age}</td>
+                                        <td>{heroe.gender}</td>
+                                        <td>{heroe.alias}</td>
+                                        <td>{heroe.power}</td>
+                                        <td>
+                                            <Link to={`/edit/${heroe.id}`} className="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></Link>
+                                            <button className="ms-1 btn btn-danger btn-sm" onClick={()=>{confirmDelete(heroe.id)}}><i class="fa-solid fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
