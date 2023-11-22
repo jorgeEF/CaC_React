@@ -5,7 +5,7 @@ const app = express();
 const puerto = 3000;
 
 app.get("/",(req,res)=>{
-    res.send("servidor express")
+    res.send("servidor express pagina principal")
 })
 
 app.get("/contacto",(req,res)=>{
