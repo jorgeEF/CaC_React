@@ -1,4 +1,4 @@
-import postModel from '../models/postModels.js'
+import postModel from '../models/postModel.js'
 
 // CRUD
 
