@@ -5,7 +5,7 @@ import postRoutes from './routes/postRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 // configuramos app express con cors y json
 app.use(cors())
